@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<h1>About</h1>
+
+<div style="display: flex; align-items: start;">
+    <img src="/pfp.png" style="display: inline; width: 150px; height: 150px;" />
+    <p>
+        Hi, I am <strong>Vivek Sharma</strong>, <br /><br />
+        Enthusiast in software development, web development, and machine learning, with experience in React.js, Node.js, and SQL.<br />
+        Currently pursuing B.Tech in Computer Science Engineering from <a href="https://www.cgc.edu.in/" target="_blank">Chandigarh Group of Colleges,Landran.</a><br />
+        Completed Diploma in Computer Engineering.
+    </p>
+</div>
+
+
+<h1>Skills <a href="/Skills">(more)</a></h1>
+
+<div class="posts-list">
+    {{ with .Site.GetPage "/skills" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+    <div class="post">
+        <p>
+        <div class="date">{{ .PublishDate.Format "Jan. 2006" }}</div>
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        {{ .Summary }}
+        </p>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+
+<!-- <h1>Recent Projects <a href="/projects">(more)</a></h1>
+
+<div class="posts-list">
+    {{ with .Site.GetPage "/projects" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+    <div class="post">
+        <p>
+        <div class="date">{{ .PublishDate.Format "Jan. 2006" }}</div>
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        {{ .Summary }}
+        </p>
+    </div>
+    {{ end }}
+    {{ end }}
+</div> -->
+
+<!-- <h1>Pictures</h1>
+
+<div class="image-grid">
+    {{ with .Site.GetPage "/projects" }}
+    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
+        {{ $image := .Page.Resources.GetMatch .Params.image }}
+        {{ with $image }}
+        {{ $thumb := .Resize "400x" }}
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+        {{end}}
+    </a>
+    {{ end }}
+    {{ end }}
+</div> -->
+
+<br />
+<br />
+<!-- social links -->
+<center>
+    <h1>Connect with me</h1>
+
+    <div class="social-links">
+        <a href="https://github.com/viveksharma2508" target="_blank">Github</a> ·
+        <a href="https://linkedin.com/in/vivek-sharma-31825024a/" target="_blank">Linkedin</a> ·
+        <a href="https://www.reddit.com/user/Vivekbh25/" target="_blank">Reddit</a>
+    </div>
+</center>
+
+{{ end }}

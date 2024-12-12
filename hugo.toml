@@ -1,0 +1,29 @@
+baseurl = "https://ankush.one"
+title = "viveksharma"
+theme = "hugo-theme-console"
+languageCode = "en-us"
+
+[params]
+# Cutting off the page title to two chars for mobile (console-demo -> co)
+titleCutting = false
+
+# Set the animation style -- https://animate.style/
+# To disable animations, please remove or comment animationStyle parameter
+animateStyle = "animated zoomIn fast"
+
+
+[[params.navlinks]]
+name = "./skills"
+url = "skills/"
+
+[[params.navlinks]]
+name = "./projects"
+url = "projects/"
+
+[[params.navlinks]]
+name = "./wins"
+url = "wins/"
+
+[[params.navlinks]]
+name = "./resume.pdf"
+url = "/resume.pdf"
