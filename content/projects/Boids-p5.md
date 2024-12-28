@@ -1,6 +1,6 @@
 +++
 title = "Boids"
-date = "2024-12-28"
+date = "2024-12-5"
 +++
 
 A p5.js-based flocking simulation where boids follow rules of separation, alignment, and cohesion to mimic natural group dynamics.
