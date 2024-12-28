@@ -3,6 +3,6 @@ title = "Tensorflow.js"
 date = "2024-12-25"
 +++
 
-- Proficient in developing machine learning models and deploying them directly in the browser using TensorFlow.js.
-- Experienced in creating and training neural networks for tasks like image classification, data visualization, and interactive AI-powered projects.
-- Skilled in integrating TensorFlow.js with JavaScript frameworks for seamless and responsive applications.
+- Develop and deploy browser-based ML models using TensorFlow.js.
+- Train neural networks for image classification, visualization, and AI projects.
+- Integrate TensorFlow.js with JavaScript frameworks for responsive applications.
