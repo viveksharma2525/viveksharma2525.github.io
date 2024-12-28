@@ -1,5 +1,5 @@
 +++
-title = "Doodle lassifier"
+title = "Doodle Classifier"
 date = "2024-12-26"
 +++
 
